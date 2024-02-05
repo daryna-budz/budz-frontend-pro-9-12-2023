@@ -17,7 +17,7 @@ document.write("2. Один долар коштує 27 гривень. Виве�
 
 //цикл 3
 function squareNum(){
-    let num = prompt("Enter the number for task 3 : ");
+    let num = +prompt("Enter the number for task 3 : ");
     let arr3 = [];
     for (let i = 1;i<=100;i++){
        if (i**2 <= num){
@@ -32,7 +32,7 @@ squareNum();
 //цикл 4
 function isSimple(){
     let count = 0;
-    let num = prompt("Enter the number for task 4 : ");
+    let num = +prompt("Enter the number for task 4 : ");
     for(let i=1;i<=num;i++){
         if(num%i == 0){
             count++;
@@ -50,8 +50,15 @@ function isSimple(){
 
 //цикл 5
 function multiply(){
-    let num = prompt("Enter the number for task 5 : ");
-    if (num%3==0){
+    let num = +prompt("Enter the number for task 5 : ");
+    let result = false;
+    for(let i=1;i<=num;i*=3){
+        if(i===num){
+            result = true;
+            break;
+        }
+    }
+    if (result){
         document.write(`5. Number ${num} can be obtained by powering number 3` + "<br><br>");
     }
     else{
